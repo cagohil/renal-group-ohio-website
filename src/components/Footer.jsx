@@ -168,7 +168,7 @@ export default function Footer({ currentPage, navigateTo }) {
 
           <div className="footer-bottom-bar">
             <div className="footer-copyright">
-              © {new Date().getFullYear()} The Renal Group. All rights reserved. Serving Youngstown, Boardman, Warren, Salem, and Northeast Ohio.
+              © {new Date().getFullYear()} The Renal Group. All rights reserved.
             </div>
 
             <div className="footer-bottom-right">
