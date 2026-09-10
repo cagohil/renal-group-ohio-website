@@ -436,6 +436,9 @@
 .affiliation-link-info {
   display: flex;
   flex-direction: column;
+  min-width: 0; /* Prevents flex flex child overflow */
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .affiliation-name {
@@ -443,6 +446,8 @@
   font-weight: 700;
   color: var(--color-navy-950);
   line-height: 1.25;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .affiliation-url-text {
@@ -450,6 +455,7 @@
   font-weight: 600;
   color: var(--color-teal-700);
   margin-top: 0.15rem;
+  word-break: break-all;
 }
 
 .affiliation-ext-icon {
@@ -737,8 +743,9 @@
    RESPONSIVE BREAKPOINTS
    ------------------------------------------------------------- */
 @media (max-width: 1200px) {
-  .partner-logos-grid {
+  .affiliations-categories-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
   .quick-action-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -746,6 +753,10 @@
 }
 
 @media (max-width: 960px) {
+  .affiliations-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
   .hero-layout-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -760,8 +771,15 @@
 }
 
 @media (max-width: 640px) {
-  .partner-logos-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .affiliations-categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .affiliation-category-card {
+    padding: 1.35rem 1.15rem;
+  }
+  .affiliation-link-item {
+    padding: 0.75rem 0.9rem;
   }
   .quick-action-grid {
     grid-template-columns: 1fr;
