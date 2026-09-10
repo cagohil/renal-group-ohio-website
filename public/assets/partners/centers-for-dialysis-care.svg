@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 80" width="310" height="80" fill="none">
+  <!-- Centers for Dialysis Care (CDC) Logo -->
+  <g id="cdc-symbol" transform="translate(10, 10)">
+    <!-- Overlapping Kidney & Care Droplet Curves -->
+    <path d="M 12 30 C 12 12, 34 8, 42 22 C 48 32, 38 48, 26 50 C 16 52, 12 42, 12 30 Z" fill="#881337" opacity="0.9"/>
+    <path d="M 28 20 C 38 10, 54 18, 52 34 C 50 46, 36 54, 24 48 C 34 44, 40 32, 28 20 Z" fill="#e11d48"/>
+    <circle cx="32" cy="30" r="5.5" fill="#ffffff"/>
+  </g>
+  <g id="cdc-text" transform="translate(74, 24)">
+    <text x="0" y="16" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#0f172a" letter-spacing="-0.02em">CENTERS FOR</text>
+    <text x="0" y="33" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="15" font-weight="900" fill="#881337" letter-spacing="-0.01em">DIALYSIS CARE</text>
+    <text x="0" y="47" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="0.08em">WARREN &amp; YOUNGSTOWN</text>
+  </g>
+</svg>

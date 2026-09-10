@@ -1,0 +1,61 @@
+/* -------------------------------------------------------------
+   MOBILE STICKY ACTION BAR
+   Accessible Touch Targets, Safe-Area Support, Fixed Mobile Bottom
+   ------------------------------------------------------------- */
+
+.mobile-sticky-action-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 0.65rem 1rem max(0.65rem, env(safe-area-inset-bottom));
+  box-shadow: 0 -4px 20px rgba(11, 33, 59, 0.12);
+  border-top: 1px solid var(--border-subtle);
+  gap: 0.75rem;
+}
+
+.sticky-action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border-radius: var(--radius-md);
+  font-size: 0.925rem;
+  font-weight: 700;
+  text-decoration: none;
+  min-height: 48px; /* Accessible touch target */
+  transition: all var(--transition-fast);
+}
+
+.sticky-call-btn {
+  background: linear-gradient(135deg, var(--color-navy-900) 0%, var(--color-navy-800) 100%);
+  color: #ffffff;
+}
+
+.sticky-call-btn:hover {
+  background: var(--color-navy-800);
+  color: #ffffff;
+}
+
+.sticky-appointment-btn {
+  background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+  color: #ffffff;
+}
+
+.sticky-appointment-btn:hover {
+  background: var(--color-teal-700);
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-action-bar {
+    display: flex;
+  }
+}

@@ -1,0 +1,299 @@
+/* -------------------------------------------------------------
+   APPOINTMENT & CONTACT STYLING
+   Modern Form Layout, Accessible Inputs, Smooth Radio Pills
+   ------------------------------------------------------------- */
+
+.appointment-section {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.appointment-wrapper-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(2rem, 4vw, 3.75rem);
+  align-items: start;
+}
+
+/* Left Column */
+.appointment-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-title {
+  font-size: clamp(1.85rem, 3vw, 2.35rem);
+  font-weight: 800;
+  color: var(--color-navy-900);
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+}
+
+.appointment-desc {
+  font-size: 1rem;
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.phone-schedule-card {
+  background-color: var(--color-navy-50);
+  border: 1px solid var(--color-navy-100);
+  border-radius: var(--radius-2xl);
+  padding: 1.6rem 1.85rem;
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  margin-bottom: 1.75rem;
+}
+
+.phone-card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xs);
+  flex-shrink: 0;
+}
+
+.phone-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-card-subtitle {
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-slate-500);
+  margin-bottom: 0.2rem;
+}
+
+.phone-card-number {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  line-height: 1.2;
+  transition: color var(--transition-fast);
+}
+
+.phone-card-number:hover {
+  color: var(--color-teal-700);
+}
+
+.phone-card-hours {
+  font-size: 0.8rem;
+  color: var(--color-slate-500);
+}
+
+.appointment-perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.perk-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-navy-900);
+  margin-bottom: 0.15rem;
+}
+
+.perk-item p {
+  font-size: 0.85rem;
+  color: var(--color-slate-600);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Right Form Column */
+.appointment-form-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-lg);
+}
+
+.form-header-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.form-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+}
+
+.form-required-note {
+  font-size: 0.75rem;
+  color: var(--color-slate-400);
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  margin-bottom: 0.35rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.7rem 0.95rem;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-size: 0.9125rem;
+  color: var(--color-slate-800);
+  background-color: #ffffff;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--color-teal-600);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.18);
+}
+
+.status-radio-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.radio-pill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-slate-700);
+  background-color: var(--surface-body);
+  transition: all var(--transition-fast);
+}
+
+.radio-pill input {
+  accent-color: var(--color-teal-600);
+}
+
+.radio-pill.selected {
+  background-color: var(--color-navy-50);
+  border-color: var(--color-navy-700);
+  color: var(--color-navy-900);
+}
+
+.hipaa-privacy-notice {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.775rem;
+  color: var(--color-slate-500);
+  background-color: var(--surface-body);
+  padding: 0.75rem 0.9rem;
+  border-radius: var(--radius-sm);
+  line-height: 1.4;
+}
+
+.btn-submit-request {
+  width: 100%;
+  padding: 0.95rem;
+  font-size: 1.025rem;
+}
+
+/* Success State */
+.submission-success-state {
+  text-align: center;
+  padding: 2.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success-icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--color-teal-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.success-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  margin-bottom: 0.65rem;
+}
+
+.success-text {
+  font-size: 0.95rem;
+  color: var(--color-slate-600);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  max-width: 460px;
+}
+
+.success-reassurance {
+  background-color: var(--color-navy-50);
+  padding: 0.9rem 1.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.75rem;
+  font-size: 0.9rem;
+  color: var(--color-navy-900);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .appointment-wrapper-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .appointment-form-card {
+    padding: 1.5rem;
+  }
+}

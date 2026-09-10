@@ -1,0 +1,140 @@
+/* -------------------------------------------------------------
+   WHY CHOOSE US STYLING
+   4-Column Equal-Height Cards, Numbered Watermark, Provider Banner
+   ------------------------------------------------------------- */
+
+.why-choose-section {
+  background-color: #ffffff;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 1.75vw, 1.5rem);
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.why-card {
+  background-color: var(--surface-body);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 2rem 1.65rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.why-card:hover {
+  background-color: #ffffff;
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(13, 148, 136, 0.4);
+  transform: translateY(-4px);
+}
+
+.why-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.why-card-number {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-slate-300);
+}
+
+.why-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+.why-card:hover .why-icon-box {
+  background-color: var(--color-teal-50);
+  color: var(--color-teal-700);
+  transform: scale(1.05);
+}
+
+.why-card-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.why-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-slate-600);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* Referrals Banner */
+.referrals-banner {
+  background-color: var(--color-navy-50);
+  border: 1px solid var(--color-navy-100);
+  border-radius: var(--radius-2xl);
+  padding: clamp(2rem, 3.5vw, 2.75rem) clamp(2rem, 4vw, 3.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.referrals-banner-content {
+  flex: 1;
+}
+
+.referrals-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  margin-bottom: 0.4rem;
+}
+
+.referrals-text {
+  font-size: 0.925rem;
+  color: var(--color-slate-700);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.referrals-cta-box {
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .referrals-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+  }
+  .referrals-cta-box {
+    width: 100%;
+  }
+  .referrals-cta-box a {
+    width: 100%;
+  }
+}

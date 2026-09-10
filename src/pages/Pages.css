@@ -1,0 +1,445 @@
+/* -------------------------------------------------------------
+   MULTIPAGE CLINICAL STYLES (Pages.css)
+   Clean Healthcare Aesthetics, Authentic Brand Colors, Breadcrumbs
+   ------------------------------------------------------------- */
+
+/* Page Banner Header */
+.page-banner {
+  background: linear-gradient(135deg, #0c233c 0%, #17385c 100%);
+  color: #ffffff;
+  padding: clamp(3.75rem, 5.5vw, 5rem) 0 clamp(2.75rem, 4vw, 3.75rem);
+  border-bottom: 3.5px solid #c49746; /* Official TRG brand gold accent */
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 450px;
+  height: 100%;
+  background: radial-gradient(circle at 80% 50%, rgba(196, 151, 70, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-banner-container {
+  position: relative;
+  z-index: 2;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  margin-bottom: 0.85rem;
+}
+
+.breadcrumb-link {
+  color: #cbd5e1;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+}
+
+.breadcrumb-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.breadcrumb-sep {
+  color: #94a3b8;
+}
+
+.breadcrumb-current {
+  color: #c49746;
+  font-weight: 700;
+}
+
+.page-banner-title {
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.02em;
+}
+
+.page-banner-subtitle {
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  color: #e2ecf7;
+  max-width: 780px;
+  line-height: 1.6;
+}
+
+/* Page Section Common Layout */
+.page-content-section {
+  padding: clamp(3.5rem, 5vw, 5rem) 0;
+  background-color: #ffffff;
+}
+
+.page-content-section.alt-bg {
+  background-color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-content-section.alt-bg::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+  height: 380px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 380' fill='none'%3E%3Cpath d='M-15 40 C45 100, 65 170, 15 230 C-35 290, 50 330, 5 370' stroke='%230d9488' stroke-width='1.5' stroke-dasharray='4 4' stroke-opacity='0.16'/%3E%3Ccircle cx='60' cy='120' r='3.5' fill='%230d9488' fill-opacity='0.22'/%3E%3Ccircle cx='30' cy='250' r='3' fill='%23c49746' fill-opacity='0.25'/%3E%3Crect x='45' y='180' width='14' height='3.5' rx='1.5' fill='%230284c7' fill-opacity='0.18'/%3E%3Crect x='50.25' y='174.75' width='3.5' height='14' rx='1.5' fill='%230284c7' fill-opacity='0.18'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  pointer-events: none;
+}
+
+.page-content-section.alt-bg::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 380px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 380' fill='none'%3E%3Cpath d='M160 30 C100 90, 80 160, 130 230 C180 300, 90 330, 140 370' stroke='%230284c7' stroke-width='1.5' stroke-dasharray='4 4' stroke-opacity='0.16'/%3E%3Ccircle cx='90' cy='150' r='3.5' fill='%230284c7' fill-opacity='0.22'/%3E%3Ccircle cx='110' cy='280' r='3' fill='%230d9488' fill-opacity='0.25'/%3E%3Crect x='85' y='70' width='14' height='3.5' rx='1.5' fill='%23c49746' fill-opacity='0.22'/%3E%3Crect x='90.25' y='64.75' width='3.5' height='14' rx='1.5' fill='%23c49746' fill-opacity='0.22'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  pointer-events: none;
+}
+
+/* Authentic Medical Grid Styles */
+.medical-two-col {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2.5rem, 4vw, 4rem);
+  align-items: start;
+}
+
+.medical-two-col.reversed {
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+/* Clean Editorial Text */
+.prose-content {
+  font-size: 1.025rem;
+  line-height: 1.75;
+  color: var(--color-slate-700);
+}
+
+.prose-content h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-content p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquote with TRG Gold Border */
+.clinical-quote {
+  border-left: 4px solid #c49746;
+  background-color: #f8fafc;
+  padding: 1.25rem 1.75rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-navy-900);
+  margin: 1.75rem 0;
+  line-height: 1.65;
+}
+
+.clinical-quote cite {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-slate-600);
+  margin-top: 0.5rem;
+}
+
+/* Sidebar Info Card */
+.clinical-sidebar-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #c49746;
+}
+
+.sidebar-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.sidebar-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.sidebar-item-icon {
+  color: #0d9488;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.sidebar-item-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-slate-500);
+  letter-spacing: 0.04em;
+}
+
+.sidebar-item-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+}
+
+.sidebar-item-phone {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+}
+
+.sidebar-item-phone:hover {
+  color: #0d9488;
+}
+
+/* Doctor Profile Full Page Card */
+.doctor-profile-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  margin-bottom: 3rem;
+  transition: box-shadow var(--transition-normal);
+}
+
+.doctor-profile-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(12, 35, 60, 0.15);
+}
+
+.doctor-photo-col {
+  background-color: var(--color-navy-950);
+  position: relative;
+}
+
+.doctor-photo-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  min-height: 420px;
+}
+
+.doctor-content-col {
+  padding: clamp(2rem, 3.5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-header-group {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.doctor-card-name {
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  font-weight: 800;
+  color: var(--color-navy-900);
+  line-height: 1.2;
+}
+
+.doctor-card-title-pill {
+  display: inline-block;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: #0c5757;
+  background-color: #f0fdfa;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-top: 0.5rem;
+  border: 1px solid #ccfbf1;
+}
+
+.doctor-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+}
+
+.doctor-info-block h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-slate-500);
+  margin-bottom: 0.4rem;
+}
+
+.doctor-info-block p {
+  font-size: 0.925rem;
+  color: var(--color-navy-900);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.doctor-bio-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-slate-700);
+  margin-bottom: 2rem;
+}
+
+.doctor-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+/* Service Detail Cards Grid on Multipage */
+.services-full-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.service-full-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 3.5vw, 2.75rem);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  transition: all var(--transition-normal);
+}
+
+.service-full-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(13, 148, 136, 0.4);
+}
+
+.service-icon-banner {
+  width: 70px;
+  height: 70px;
+  border-radius: var(--radius-lg);
+  background: #f0f5fa;
+  color: var(--color-navy-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-navy-100);
+}
+
+.service-full-content h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  margin-bottom: 0.75rem;
+}
+
+.service-full-content p {
+  font-size: 0.975rem;
+  color: var(--color-slate-700);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.service-key-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--color-navy-950);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .doctor-profile-card {
+    grid-template-columns: 1fr;
+  }
+  .doctor-photo-col img {
+    min-height: 320px;
+    max-height: 400px;
+  }
+  .medical-two-col,
+  .medical-two-col.reversed {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .service-full-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .doctor-info-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-key-points {
+    grid-template-columns: 1fr;
+  }
+}

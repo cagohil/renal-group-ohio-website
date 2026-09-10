@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80" fill="none">
+  <!-- DaVita Kidney Care Official Logo -->
+  <g transform="translate(16, 18)">
+    <!-- DaVita text -->
+    <text x="0" y="36" font-family="'Georgia', 'Times New Roman', serif" font-size="38" font-weight="700" fill="#003366" letter-spacing="-0.02em">DaV<tspan font-family="'Plus Jakarta Sans', sans-serif">ı</tspan>ta.</text>
+    <!-- DaVita Starburst Spark dot for 'i' -->
+    <g transform="translate(73, 8)">
+      <path d="M 5 0 L 6.5 3.5 L 10 5 L 6.5 6.5 L 5 10 L 3.5 6.5 L 0 5 L 3.5 3.5 Z" fill="#d9222a"/>
+      <circle cx="5" cy="5" r="1.5" fill="#ffffff"/>
+    </g>
+    <!-- Tagline -->
+    <text x="2" y="49" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="800" fill="#64748b" letter-spacing="0.14em">KIDNEY CARE</text>
+  </g>
+</svg>

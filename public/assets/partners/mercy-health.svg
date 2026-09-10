@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" width="280" height="80" fill="none">
+  <!-- Mercy Health Official Identity (Humility of Mary Health Partners) -->
+  <g id="mercy-symbol" transform="translate(12, 10)">
+    <!-- Top Petal -->
+    <path d="M 30 5 C 38 15, 36 28, 30 30 C 24 28, 22 15, 30 5 Z" fill="#00a3ad"/>
+    <!-- Bottom Petal -->
+    <path d="M 30 55 C 22 45, 24 32, 30 30 C 36 32, 38 45, 30 55 Z" fill="#002855"/>
+    <!-- Left Petal -->
+    <path d="M 5 30 C 15 22, 28 24, 30 30 C 28 36, 15 38, 5 30 Z" fill="#002855"/>
+    <!-- Right Petal -->
+    <path d="M 55 30 C 45 38, 32 36, 30 30 C 32 24, 45 22, 55 30 Z" fill="#00a3ad"/>
+    <!-- Center connecting circle -->
+    <circle cx="30" cy="30" r="4.5" fill="#ffffff"/>
+  </g>
+  <g id="mercy-text" transform="translate(76, 26)">
+    <text x="0" y="20" font-family="'Plus Jakarta Sans', 'Inter', 'Helvetica Neue', sans-serif" font-size="22" font-weight="900" fill="#002855" letter-spacing="-0.03em">MERCY<tspan fill="#00a3ad">HEALTH</tspan></text>
+    <text x="1" y="36" font-family="'Inter', sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="0.1em">ST. ELIZABETH YOUNGSTOWN</text>
+  </g>
+</svg>

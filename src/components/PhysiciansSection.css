@@ -1,0 +1,363 @@
+/* -------------------------------------------------------------
+   PHYSICIANS SECTION STYLING
+   Equal-Height Profile Cards, Crisp Photo Vignettes, Aligned CTAs
+   ------------------------------------------------------------- */
+
+.physicians-section {
+  background-color: #ffffff;
+}
+
+.physicians-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.physician-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.physician-card:hover {
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(13, 148, 136, 0.4);
+  transform: translateY(-4px);
+}
+
+.physician-photo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background-color: var(--color-navy-950);
+  overflow: hidden;
+}
+
+.physician-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--transition-slow);
+}
+
+.physician-card:hover .physician-photo {
+  transform: scale(1.03);
+}
+
+.physician-badge-pill {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: rgba(7, 21, 38, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.physician-details {
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.physician-header {
+  margin-bottom: 1rem;
+}
+
+.physician-name {
+  font-size: clamp(1.4rem, 2vw, 1.7rem);
+  font-weight: 800;
+  color: var(--color-navy-900);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.physician-credentials {
+  display: inline-block;
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--color-teal-700);
+  margin-left: 0.35rem;
+}
+
+.physician-role {
+  font-size: 0.9rem;
+  color: var(--color-slate-600);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.cert-box {
+  margin-bottom: 1rem;
+}
+
+.cert-label {
+  display: block;
+  font-size: 0.725rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-slate-500);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+.cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.cert-tag {
+  background-color: var(--color-navy-50);
+  color: var(--color-navy-900);
+  border: 1px solid var(--color-navy-100);
+  font-size: 0.775rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+
+.physician-key-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.15rem;
+  background-color: var(--surface-body);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.key-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+  color: var(--color-slate-700);
+  line-height: 1.4;
+}
+
+.point-icon {
+  color: var(--color-teal-600);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.physician-summary-text {
+  font-size: 0.9125rem;
+  color: var(--color-slate-600);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+}
+
+/* Card CTA Actions - Aligned cleanly at the bottom */
+.physician-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Advanced Practice Professionals Card */
+.advanced-practice-card {
+  background-color: var(--color-navy-50);
+  border: 1px solid var(--color-navy-100);
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.advanced-practice-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-lg);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.advanced-practice-tag {
+  font-size: 0.775rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-teal-700);
+  margin-bottom: 0.25rem;
+}
+
+.advanced-practice-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  margin-bottom: 0.4rem;
+}
+
+.advanced-practice-desc {
+  font-size: 0.925rem;
+  color: var(--color-slate-600);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* Physician Modal */
+.physician-modal {
+  max-width: 660px;
+}
+
+.modal-physician-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.modal-physician-thumb {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--color-navy-100);
+}
+
+.modal-physician-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  line-height: 1.2;
+}
+
+.modal-physician-subtitle {
+  font-size: 0.9rem;
+  color: var(--color-slate-600);
+}
+
+.modal-physician-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.modal-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy-900);
+}
+
+.modal-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.modal-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: var(--color-slate-700);
+}
+
+.modal-edu-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: var(--surface-body);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.edu-row {
+  font-size: 0.9rem;
+  color: var(--color-slate-700);
+}
+
+.modal-tags-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.society-tag {
+  background-color: var(--color-teal-50);
+  color: var(--color-teal-800);
+  border: 1px solid var(--color-teal-100);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.modal-physician-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .physicians-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .advanced-practice-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .physician-actions {
+    flex-direction: column;
+  }
+  .physician-actions button {
+    width: 100%;
+  }
+  .modal-physician-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

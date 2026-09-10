@@ -1,0 +1,23 @@
+/* Appointment Modal Styling */
+.appointment-modal-dialog {
+  max-width: 960px;
+  width: 95%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+.appointment-modal-dialog .section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.appointment-modal-dialog .appointment-wrapper-grid {
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .appointment-modal-dialog {
+    padding: 1rem;
+    max-height: 95vh;
+  }
+}

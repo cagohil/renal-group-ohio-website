@@ -1,0 +1,151 @@
+/* -------------------------------------------------------------
+   QUICK ACTION BAR STYLING
+   Equal-Height Cards, Smooth Hover Transitions, Clean Grid
+   ------------------------------------------------------------- */
+
+.quick-action-section {
+  position: relative;
+  z-index: 10;
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.quick-action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 1.75vw, 1.5rem);
+}
+
+.quick-action-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 1.65rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(13, 148, 136, 0.4);
+}
+
+.quick-action-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+}
+
+.quick-action-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-navy-50);
+  color: var(--color-navy-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.quick-action-card:hover .quick-action-icon-box {
+  background-color: var(--color-teal-50);
+  color: var(--color-teal-700);
+  transform: scale(1.05);
+}
+
+.quick-action-pill {
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: var(--color-slate-500);
+  background-color: var(--color-slate-100);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all var(--transition-fast);
+}
+
+.quick-action-card:hover .quick-action-pill {
+  color: var(--color-teal-800);
+  background-color: var(--color-teal-50);
+}
+
+.quick-action-body {
+  flex: 1;
+  margin-bottom: 1.25rem;
+}
+
+.quick-action-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-navy-900);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.quick-action-desc {
+  font-size: 0.8875rem;
+  color: var(--color-slate-600);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.quick-action-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.quick-action-arrow-text {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--color-navy-800);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.quick-action-arrow-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-navy-50);
+  color: var(--color-navy-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.quick-action-card:hover .quick-action-arrow-circle {
+  background-color: var(--color-teal-600);
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .quick-action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .quick-action-grid {
+    grid-template-columns: 1fr;
+  }
+  .quick-action-card {
+    padding: 1.35rem;
+  }
+}

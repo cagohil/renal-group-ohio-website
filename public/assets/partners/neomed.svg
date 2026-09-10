@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 80" width="290" height="80" fill="none">
+  <!-- NEOMED (Northeast Ohio Medical University) Logo -->
+  <g transform="translate(14, 16)">
+    <!-- NEOMED Crest / Monogram -->
+    <rect x="0" y="3" width="46" height="46" rx="6" fill="#002d62"/>
+    <text x="7" y="35" font-family="'Georgia', serif" font-size="28" font-weight="900" fill="#cba135">N</text>
+    
+    <!-- Wordmark -->
+    <g transform="translate(56, 4)">
+      <text x="0" y="22" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="24" font-weight="900" fill="#002d62" letter-spacing="-0.02em">NEOMED</text>
+      <!-- Gold rule bar -->
+      <rect x="0" y="27" width="98" height="2.5" fill="#cba135"/>
+      <text x="0" y="39" font-family="'Inter', sans-serif" font-size="8.5" font-weight="700" fill="#475569" letter-spacing="0.08em">NORTHEAST OHIO MEDICAL UNIVERSITY</text>
+    </g>
+  </g>
+</svg>
