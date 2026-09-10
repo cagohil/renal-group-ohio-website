@@ -15,48 +15,45 @@ import {
   HeartPulse,
   Home,
   ExternalLink,
-  Building2
+  Building2,
+  GraduationCap
 } from 'lucide-react';
 import { practiceInfo, physicians } from '../data/practiceData';
 import './HomePage.css';
 import './Pages.css';
 
-const hospitalPartners = [
+const clinicalAffiliations = [
   {
-    name: "Salem Regional Medical Center",
-    role: "Inpatient Hospital Partner",
-    logo: "/assets/partners/salem-regional.svg",
-    url: "https://www.salemregional.com"
+    category: "Hospitals",
+    icon: Building2,
+    badgeColor: "teal",
+    description: "Inpatient admitting privileges and emergency nephrology consultations across regional hospital systems.",
+    items: [
+      { name: "Salem Regional Medical Center", url: "https://www.salemhosp.com", displayUrl: "www.salemhosp.com" },
+      { name: "Mercy Health", url: "http://www.hmpartners.org", displayUrl: "www.hmpartners.org" }
+    ]
   },
   {
-    name: "Mercy Health – St. Elizabeth",
-    role: "Youngstown Hospital Partner",
-    logo: "/assets/partners/mercy-health.svg",
-    url: "http://www.hmpartners.org"
+    category: "Dialysis Units",
+    icon: Activity,
+    badgeColor: "sky",
+    description: "Medical directorships, outpatient hemodialysis, and peritoneal dialysis care across regional units.",
+    items: [
+      { name: "Centers for Dialysis Care", url: "https://www.cdcare.org", displayUrl: "www.cdcare.org" },
+      { name: "DaVita", url: "https://www.davita.com", displayUrl: "www.davita.com" },
+      { name: "Fresenius Medical Care", url: "https://www.fmcna.com", displayUrl: "www.fmcna.com" }
+    ]
   },
   {
-    name: "Centers for Dialysis Care",
-    role: "Dialysis Directorship Partner",
-    logo: "/assets/partners/centers-for-dialysis-care.svg",
-    url: "https://www.cdcare.org"
-  },
-  {
-    name: "DaVita Kidney Care",
-    role: "Dialysis Center Partner",
-    logo: "/assets/partners/davita.svg",
-    url: "https://www.davita.com"
-  },
-  {
-    name: "Fresenius Kidney Care",
-    role: "Dialysis Center Partner",
-    logo: "/assets/partners/fresenius.svg",
-    url: "https://www.freseniuskidneycare.com"
-  },
-  {
-    name: "NEOMED",
-    role: "Academic Teaching Partner",
-    logo: "/assets/partners/neomed.svg",
-    url: "https://www.neomed.edu"
+    category: "Teaching Institutions",
+    icon: GraduationCap,
+    badgeColor: "gold",
+    description: "Academic teaching appointments, clinical faculty leadership, and medical student training.",
+    items: [
+      { name: "Northeast Ohio Medical University", url: "https://www.neomed.edu", displayUrl: "www.neomed.edu" },
+      { name: "Ohio University", url: "https://www.ohio.edu", displayUrl: "www.ohio.edu" },
+      { name: "Youngstown State University", url: "https://www.ysu.edu", displayUrl: "www.ysu.edu" }
+    ]
   }
 ];
 
@@ -132,9 +129,9 @@ export default function HomePage({ navigateTo, onOpenAppointmentModal }) {
                     <Phone size={18} />
                   </div>
                   <div className="badge-float-text">
-                    <span className="badge-float-tag">24/7 PATIENT ON-CALL</span>
-                    <a href={`tel:${practiceInfo.emergencyOnCall.replace(/\D/g, '')}`} className="badge-float-link">
-                      {practiceInfo.emergencyOnCall}
+                    <span className="badge-float-tag">MAIN OFFICE</span>
+                    <a href={`tel:${practiceInfo.phone.replace(/\D/g, '')}`} className="badge-float-link">
+                      {practiceInfo.phone}
                     </a>
                   </div>
                 </div>
@@ -144,7 +141,7 @@ export default function HomePage({ navigateTo, onOpenAppointmentModal }) {
                     <MapPin size={18} />
                   </div>
                   <div className="badge-float-text">
-                    <span className="badge-float-tag">MAIN OFFICE</span>
+                    <span className="badge-float-tag">ADDRESS</span>
                     <span className="badge-float-title">807 Southwestern Run, Boardman</span>
                   </div>
                 </div>
@@ -171,39 +168,55 @@ export default function HomePage({ navigateTo, onOpenAppointmentModal }) {
         </div>
       </section>
 
-      {/* Clinical Affiliations & Hospital Partnerships Logo Showcase */}
-      <section className="affiliations-section" aria-label="Clinical Affiliations & Hospital Partnerships">
+      {/* Clinical Affiliations & Partnerships Section */}
+      <section className="affiliations-section" aria-label="Clinical Affiliations & Partnerships">
         <div className="container">
-          <div className="affiliations-header">
-            <span className="affiliations-kicker">
+          <div className="section-header">
+            <div className="badge-tag teal">
               <Building2 size={13} />
-              <span>Institutional Relationships</span>
-            </span>
-            <h2 className="affiliations-title">Clinical Affiliations & Hospital Partnerships</h2>
-            <p className="affiliations-subtitle">
-              Our nephrologists maintain medical directorships, hospital admitting privileges, and academic teaching appointments across major healthcare systems in Northeast Ohio.
+              <span>Clinical Network</span>
+            </div>
+            <h2 className="section-title">Clinical Affiliations & Partnerships</h2>
+            <p className="section-subtitle">
+              Our board-certified nephrologists maintain hospital admitting privileges, medical directorships, and academic teaching appointments across Northeast Ohio.
             </p>
           </div>
 
-          <div className="partner-logos-grid">
-            {hospitalPartners.map((partner) => (
-              <a
-                key={partner.name}
-                href={partner.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="partner-logo-card"
-                title={`Visit ${partner.name} (${partner.role})`}
-              >
-                <img
-                  src={partner.logo}
-                  alt={`${partner.name} official logo`}
-                  className="partner-logo-img"
-                  loading="lazy"
-                />
-                <span className="partner-logo-caption">{partner.role}</span>
-              </a>
-            ))}
+          <div className="affiliations-categories-grid">
+            {clinicalAffiliations.map((cat) => {
+              const IconComponent = cat.icon;
+              return (
+                <div key={cat.category} className="affiliation-category-card">
+                  <div className="category-card-header">
+                    <div className={`category-icon-box ${cat.badgeColor}`}>
+                      <IconComponent size={24} />
+                    </div>
+                    <h3 className="category-card-title">{cat.category}</h3>
+                  </div>
+
+                  <p className="category-card-desc">{cat.description}</p>
+
+                  <div className="category-links-list">
+                    {cat.items.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="affiliation-link-item"
+                        title={`Visit ${item.name} website (${item.displayUrl})`}
+                      >
+                        <div className="affiliation-link-info">
+                          <span className="affiliation-name">{item.name}</span>
+                          <span className="affiliation-url-text">{item.displayUrl}</span>
+                        </div>
+                        <ExternalLink size={15} className="affiliation-ext-icon" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

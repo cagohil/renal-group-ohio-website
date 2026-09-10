@@ -72,7 +72,7 @@ export default function Navbar({
 
           <div className="navbar-top-right">
             {/* Accessibility Font Resizer */}
-            <div className="accessibility-control" title="Adjust text size for easier reading">
+            {/* <div className="accessibility-control" title="Adjust text size for easier reading">
               <Type size={13} className="control-icon" />
               <span className="control-label">Text Size:</span>
               <div className="size-buttons">
@@ -98,7 +98,7 @@ export default function Navbar({
                   A++
                 </button>
               </div>
-            </div>
+            </div> */}
 
             {/* High Contrast Toggle */}
             <button

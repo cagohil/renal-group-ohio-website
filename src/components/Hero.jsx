@@ -104,9 +104,8 @@ export default function Hero({ onOpenAppointmentModal }) {
                   <PhoneCall size={18} />
                 </div>
                 <div className="badge-float-text">
-                  <span className="badge-float-tag">24/7 PATIENT ON-CALL</span>
-                  <a href={`tel:${practiceInfo.emergencyOnCall.replace(/\D/g, '')}`} className="badge-float-link">
-                    {practiceInfo.emergencyOnCall}
+                  <a href={`tel:${practiceInfo.phone.replace(/\D/g, '')}`} className="badge-float-link">
+                    {practiceInfo.phone}
                   </a>
                 </div>
               </div>

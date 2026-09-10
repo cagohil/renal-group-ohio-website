@@ -322,57 +322,143 @@
   line-height: 1.55;
 }
 
-.partner-logos-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.25rem;
-  align-items: stretch;
+/* -------------------------------------------------------------
+   CLINICAL AFFILIATIONS CATEGORY CARDS
+   ------------------------------------------------------------- */
+.affiliations-section {
+  padding-top: clamp(3.5rem, 5vw, 5rem);
+  padding-bottom: clamp(3.5rem, 5vw, 5rem);
+  background-color: #ffffff;
 }
 
-.partner-logo-card {
-  background-color: #ffffff;
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
-  padding: 1.25rem 1rem;
+.affiliations-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.affiliation-category-card {
+  background-color: var(--color-slate-50);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.65rem, 2.5vw, 2.25rem);
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.affiliation-category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(13, 148, 136, 0.4);
+  background-color: #ffffff;
+}
+
+.category-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.category-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  flex-shrink: 0;
+}
+
+.category-icon-box.teal {
+  background-color: var(--color-teal-50);
+  color: var(--color-teal-700);
+  border: 1px solid var(--color-teal-100);
+}
+
+.category-icon-box.sky {
+  background-color: var(--color-sky-50);
+  color: var(--color-sky-700);
+  border: 1px solid var(--color-sky-100);
+}
+
+.category-icon-box.gold {
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.category-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-navy-950);
+  line-height: 1.2;
+}
+
+.category-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-slate-600);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+}
+
+.category-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.affiliation-link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1.15rem;
   text-decoration: none;
-  transition: all var(--transition-normal);
+  transition: all var(--transition-fast);
   box-shadow: var(--shadow-xs);
-  min-height: 110px;
-  position: relative;
 }
 
-.partner-logo-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(13, 148, 136, 0.4);
-  box-shadow: var(--shadow-md);
+.affiliation-link-item:hover {
+  border-color: var(--color-teal-600);
+  background-color: var(--color-teal-50);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
 }
 
-.partner-logo-img {
-  max-height: 48px;
-  max-width: 100%;
-  width: auto;
-  object-fit: contain;
-  transition: transform var(--transition-fast);
+.affiliation-link-info {
+  display: flex;
+  flex-direction: column;
 }
 
-.partner-logo-card:hover .partner-logo-img {
-  transform: scale(1.03);
-}
-
-.partner-logo-caption {
-  font-size: 0.725rem;
+.affiliation-name {
+  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--color-slate-500);
-  margin-top: 0.65rem;
+  color: var(--color-navy-950);
   line-height: 1.25;
 }
 
-.partner-logo-card:hover .partner-logo-caption {
+.affiliation-url-text {
+  font-size: 0.785rem;
+  font-weight: 600;
+  color: var(--color-teal-700);
+  margin-top: 0.15rem;
+}
+
+.affiliation-ext-icon {
+  color: var(--color-slate-400);
+  flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+
+.affiliation-link-item:hover .affiliation-ext-icon {
   color: var(--color-teal-700);
 }
 

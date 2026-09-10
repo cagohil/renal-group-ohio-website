@@ -1,23 +1,119 @@
-/* Appointment Modal Styling */
-.appointment-modal-dialog {
-  max-width: 960px;
-  width: 95%;
-  padding: 1.5rem;
+/* Appointment Maintenance Modal Styling */
+.appointment-modal-dialog.maintenance-modal-dialog {
+  max-width: 580px;
+  width: 92%;
+  padding: 2.5rem 2rem 2rem 2rem;
   background-color: #ffffff;
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 24px 60px rgba(7, 21, 38, 0.28);
+  position: relative;
 }
 
-.appointment-modal-dialog .section {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.maintenance-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.appointment-modal-dialog .appointment-wrapper-grid {
-  gap: 2rem;
+.maintenance-icon-badge {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+  color: var(--color-teal-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.18);
+  border: 1px solid rgba(13, 148, 136, 0.2);
 }
 
-@media (max-width: 768px) {
-  .appointment-modal-dialog {
-    padding: 1rem;
-    max-height: 95vh;
+.maintenance-pill {
+  display: inline-block;
+  font-size: 0.775rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #b45309;
+  background-color: #fef3c7;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+  border: 1px solid #fde68a;
+}
+
+.maintenance-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+  font-weight: 800;
+  color: var(--color-navy-950);
+  line-height: 1.25;
+  margin-bottom: 0.85rem;
+}
+
+.maintenance-message {
+  font-size: 0.95rem;
+  color: var(--color-slate-600);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+  max-width: 480px;
+}
+
+.maintenance-contact-card {
+  background-color: var(--color-navy-50);
+  border: 1px solid var(--color-navy-100);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem 1.25rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.contact-card-heading {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-navy-950);
+  margin-bottom: 0.35rem;
+}
+
+.contact-card-sub {
+  font-size: 0.875rem;
+  color: var(--color-slate-600);
+  margin-bottom: 1.25rem;
+  line-height: 1.45;
+}
+
+.maintenance-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.maintenance-actions .btn {
+  width: 100%;
+}
+
+.maintenance-hours-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-slate-600);
+}
+
+.btn-close-modal {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .appointment-modal-dialog.maintenance-modal-dialog {
+    padding: 2rem 1.25rem 1.5rem 1.25rem;
   }
 }

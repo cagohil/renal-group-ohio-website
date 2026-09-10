@@ -8,7 +8,8 @@ import {
   Calendar,
   Phone,
   ArrowRight,
-  CheckCircle2
+  CheckCircle2,
+  ExternalLink
 } from 'lucide-react';
 import { practiceInfo, affiliations, advancedPracticeTeam } from '../data/practiceData';
 import './Pages.css';
@@ -123,28 +124,65 @@ export default function AboutPage({ navigateTo, onOpenAppointmentModal }) {
                 </div>
 
                 <div style={{ borderTop: '1px solid #e2e8f0', paddingTop: '1.25rem' }}>
-                  <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#0c233c', marginBottom: '0.75rem' }}>
-                    Hospital & Dialysis Directorships:
+                  <h4 style={{ fontSize: '0.9rem', fontWeight: 800, color: '#0c233c', marginBottom: '0.85rem' }}>
+                    Clinical & Institutional Network:
                   </h4>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.6rem', marginBottom: '0.75rem' }}>
-                    <a href="https://www.salemregional.com" target="_blank" rel="noopener noreferrer" style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '0.4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '44px' }} title="Salem Regional Medical Center">
-                      <img src="/assets/partners/salem-regional.svg" alt="Salem Regional Medical Center" style={{ maxHeight: '28px', maxWidth: '100%', objectFit: 'contain' }} />
-                    </a>
-                    <a href="http://www.hmpartners.org" target="_blank" rel="noopener noreferrer" style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '0.4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '44px' }} title="Mercy Health - St. Elizabeth">
-                      <img src="/assets/partners/mercy-health.svg" alt="Mercy Health" style={{ maxHeight: '28px', maxWidth: '100%', objectFit: 'contain' }} />
-                    </a>
-                    <a href="https://www.cdcare.org" target="_blank" rel="noopener noreferrer" style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '0.4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '44px' }} title="Centers for Dialysis Care">
-                      <img src="/assets/partners/centers-for-dialysis-care.svg" alt="Centers for Dialysis Care" style={{ maxHeight: '28px', maxWidth: '100%', objectFit: 'contain' }} />
-                    </a>
-                    <a href="https://www.davita.com" target="_blank" rel="noopener noreferrer" style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '0.4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '44px' }} title="DaVita Kidney Care">
-                      <img src="/assets/partners/davita.svg" alt="DaVita" style={{ maxHeight: '28px', maxWidth: '100%', objectFit: 'contain' }} />
-                    </a>
-                    <a href="https://www.freseniuskidneycare.com" target="_blank" rel="noopener noreferrer" style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '0.4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '44px' }} title="Fresenius Kidney Care">
-                      <img src="/assets/partners/fresenius.svg" alt="Fresenius Kidney Care" style={{ maxHeight: '28px', maxWidth: '100%', objectFit: 'contain' }} />
-                    </a>
-                    <a href="https://www.neomed.edu" target="_blank" rel="noopener noreferrer" style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '8px', padding: '0.4rem', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '44px' }} title="NEOMED">
-                      <img src="/assets/partners/neomed.svg" alt="NEOMED" style={{ maxHeight: '28px', maxWidth: '100%', objectFit: 'contain' }} />
-                    </a>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem' }}>
+                    <div>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#0d9488', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: '0.35rem' }}>
+                        Hospitals
+                      </span>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                        <a href="https://www.salemhosp.com" target="_blank" rel="noopener noreferrer" className="sidebar-network-link">
+                          <span>Salem Regional Medical Center</span>
+                          <ExternalLink size={12} />
+                        </a>
+                        <a href="http://www.hmpartners.org" target="_blank" rel="noopener noreferrer" className="sidebar-network-link">
+                          <span>Mercy Health</span>
+                          <ExternalLink size={12} />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#0284c7', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: '0.35rem' }}>
+                        Dialysis Units
+                      </span>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                        <a href="https://www.cdcare.org" target="_blank" rel="noopener noreferrer" className="sidebar-network-link">
+                          <span>Centers for Dialysis Care</span>
+                          <ExternalLink size={12} />
+                        </a>
+                        <a href="https://www.davita.com" target="_blank" rel="noopener noreferrer" className="sidebar-network-link">
+                          <span>DaVita</span>
+                          <ExternalLink size={12} />
+                        </a>
+                        <a href="https://www.fmcna.com" target="_blank" rel="noopener noreferrer" className="sidebar-network-link">
+                          <span>Fresenius Medical Care</span>
+                          <ExternalLink size={12} />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 800, color: '#b45309', textTransform: 'uppercase', letterSpacing: '0.05em', display: 'block', marginBottom: '0.35rem' }}>
+                        Teaching Institutions
+                      </span>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                        <a href="https://www.neomed.edu" target="_blank" rel="noopener noreferrer" className="sidebar-network-link">
+                          <span>Northeast Ohio Medical University</span>
+                          <ExternalLink size={12} />
+                        </a>
+                        <a href="https://www.ohio.edu" target="_blank" rel="noopener noreferrer" className="sidebar-network-link">
+                          <span>Ohio University</span>
+                          <ExternalLink size={12} />
+                        </a>
+                        <a href="https://www.ysu.edu" target="_blank" rel="noopener noreferrer" className="sidebar-network-link">
+                          <span>Youngstown State University</span>
+                          <ExternalLink size={12} />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
