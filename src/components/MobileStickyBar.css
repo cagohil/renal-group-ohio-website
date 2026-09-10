@@ -1,61 +1,50 @@
 /* -------------------------------------------------------------
-   MOBILE STICKY ACTION BAR
-   Accessible Touch Targets, Safe-Area Support, Fixed Mobile Bottom
+   MOBILE FLOATING ICON ACTION BUTTONS (FABs)
+   Compact, Non-Intrusive, Bottom-Right Floating Quick Access
    ------------------------------------------------------------- */
 
-.mobile-sticky-action-bar {
+.mobile-floating-actions {
   display: none;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  right: 1.25rem;
   z-index: 1020;
-  background-color: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 0.65rem 1rem max(0.65rem, env(safe-area-inset-bottom));
-  box-shadow: 0 -4px 20px rgba(11, 33, 59, 0.12);
-  border-top: 1px solid var(--border-subtle);
+  flex-direction: column;
   gap: 0.75rem;
+  align-items: center;
 }
 
-.sticky-action-btn {
-  flex: 1;
+.floating-action-fab {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.8rem;
-  border-radius: var(--radius-md);
-  font-size: 0.925rem;
-  font-weight: 700;
-  text-decoration: none;
-  min-height: 48px; /* Accessible touch target */
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(7, 21, 38, 0.28), 0 2px 6px rgba(0, 0, 0, 0.12);
   transition: all var(--transition-fast);
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 }
 
-.sticky-call-btn {
+.floating-action-fab:active,
+.floating-action-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(7, 21, 38, 0.35);
+}
+
+.fab-call {
   background: linear-gradient(135deg, var(--color-navy-900) 0%, var(--color-navy-800) 100%);
-  color: #ffffff;
 }
 
-.sticky-call-btn:hover {
-  background: var(--color-navy-800);
-  color: #ffffff;
-}
-
-.sticky-appointment-btn {
+.fab-appointment {
   background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
-  color: #ffffff;
-}
-
-.sticky-appointment-btn:hover {
-  background: var(--color-teal-700);
-  color: #ffffff;
 }
 
 @media (max-width: 768px) {
-  .mobile-sticky-action-bar {
+  .mobile-floating-actions {
     display: flex;
   }
 }

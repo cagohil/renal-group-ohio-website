@@ -367,6 +367,7 @@
   grid-template-columns: 80px 1fr;
   gap: 2rem;
   transition: all var(--transition-normal);
+  scroll-margin-top: 100px;
 }
 
 .service-full-card:hover {

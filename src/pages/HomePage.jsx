@@ -222,7 +222,7 @@ export default function HomePage({ navigateTo, onOpenAppointmentModal }) {
           </div>
 
           <div className="quick-action-grid">
-            <div className="quick-action-card" onClick={() => navigateTo('services')}>
+            <div className="quick-action-card" onClick={() => navigateTo('services', '', 'service-chronic-kidney-disease')}>
               <div className="quick-action-top">
                 <div className="quick-action-icon-box">
                   <Activity size={24} />
@@ -241,7 +241,7 @@ export default function HomePage({ navigateTo, onOpenAppointmentModal }) {
               </div>
             </div>
 
-            <div className="quick-action-card" onClick={() => navigateTo('services')}>
+            <div className="quick-action-card" onClick={() => navigateTo('services', '', 'service-hypertension')}>
               <div className="quick-action-top">
                 <div className="quick-action-icon-box">
                   <HeartPulse size={24} />
@@ -260,7 +260,7 @@ export default function HomePage({ navigateTo, onOpenAppointmentModal }) {
               </div>
             </div>
 
-            <div className="quick-action-card" onClick={() => navigateTo('services')}>
+            <div className="quick-action-card" onClick={() => navigateTo('services', '', 'service-home-hemodialysis')}>
               <div className="quick-action-top">
                 <div className="quick-action-icon-box">
                   <Home size={24} />

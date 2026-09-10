@@ -53,13 +53,25 @@ export default function App() {
     document.documentElement.setAttribute('data-contrast', isHighContrast ? 'high' : 'normal');
   }, [isHighContrast]);
 
-  const navigateTo = (page, doctorName = "") => {
+  const navigateTo = (page, doctorName = "", targetId = "") => {
     if (doctorName) {
       setPreselectedDoctor(doctorName);
     }
     window.location.hash = `#/${page}`;
     setCurrentPage(page);
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+    if (targetId) {
+      setTimeout(() => {
+        const el = document.getElementById(targetId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
   };
 
   const handleOpenAppointmentModal = (doctorName = "") => {

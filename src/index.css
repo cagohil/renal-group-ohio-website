@@ -308,13 +308,17 @@ img {
   gap: 0.55rem;
   font-weight: 600;
   font-size: 0.975rem;
-  padding: 0.8rem 1.6rem;
+  padding: 0.8rem 1.4rem;
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   text-decoration: none;
   min-height: 48px; /* Accessible touch target */
   cursor: pointer;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  text-align: center;
+  max-width: 100%;
 }
 
 .btn-primary {

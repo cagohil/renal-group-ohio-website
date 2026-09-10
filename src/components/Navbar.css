@@ -367,12 +367,18 @@
 /* Mobile Drawer Menu */
 .mobile-drawer {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100dvh;
   background-color: #ffffff;
-  z-index: 2000;
+  z-index: 99999;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   animation: fadeInModal 0.2s ease-out;
 }
 
@@ -536,6 +542,6 @@
   }
 
   .brand-logo-img {
-    height: 36px;
+    height: 50px;
   }
 }

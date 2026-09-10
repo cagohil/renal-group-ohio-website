@@ -50,45 +50,14 @@ export default function Footer({ currentPage, navigateTo }) {
     });
   };
 
-  const handleNavClick = (pageId) => {
+  const handleNavClick = (pageId, targetId = "") => {
     if (navigateTo) {
-      navigateTo(pageId);
+      navigateTo(pageId, "", targetId);
     }
   };
 
   return (
     <footer className="footer-wrapper">
-      {/* Top Footer Affiliations Bar with Actual Partner Logos */}
-      <div className="footer-affiliations-bar">
-        <div className="container">
-          <div className="affiliations-flex">
-            <div className="affiliations-title-wrap">
-              <span className="affiliations-lead">Clinical Affiliations & Hospital Partnerships</span>
-              <span className="affiliations-sub-lead">Direct Admitting & Dialysis Directorships</span>
-            </div>
-
-            <div className="affiliations-logos-row">
-              {hospitalPartners.map((partner) => (
-                <a
-                  key={partner.name}
-                  href={partner.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-partner-badge"
-                  title={`Visit ${partner.name} (${partner.url})`}
-                >
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="footer-partner-img"
-                    loading="lazy"
-                  />
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Main Footer Body */}
       <div className="footer-main">
@@ -135,14 +104,14 @@ export default function Footer({ currentPage, navigateTo }) {
             <div className="footer-col">
               <h4 className="footer-col-title">Kidney Care Specialties</h4>
               <ul className="footer-links-list">
-                <li><button onClick={() => handleNavClick('services')} className="footer-link-btn">General Nephrology</button></li>
-                <li><button onClick={() => handleNavClick('services')} className="footer-link-btn">Chronic Kidney Disease (CKD)</button></li>
-                <li><button onClick={() => handleNavClick('services')} className="footer-link-btn">Hypertension Care Clinic</button></li>
-                <li><button onClick={() => handleNavClick('services')} className="footer-link-btn">Inpatient & Outpatient Dialysis</button></li>
-                <li><button onClick={() => handleNavClick('services')} className="footer-link-btn">Home Hemodialysis (NxStage)</button></li>
-                <li><button onClick={() => handleNavClick('services')} className="footer-link-btn">Peritoneal Dialysis (HomeChoice)</button></li>
-                <li><button onClick={() => handleNavClick('services')} className="footer-link-btn">Transplant Follow-Up Care</button></li>
-                <li><button onClick={() => handleNavClick('services')} className="footer-link-btn">Clinical Research Trials</button></li>
+                <li><button onClick={() => handleNavClick('services', 'service-nephrology')} className="footer-link-btn">General Nephrology</button></li>
+                <li><button onClick={() => handleNavClick('services', 'service-chronic-kidney-disease')} className="footer-link-btn">Chronic Kidney Disease (CKD)</button></li>
+                <li><button onClick={() => handleNavClick('services', 'service-hypertension')} className="footer-link-btn">Hypertension Care Clinic</button></li>
+                <li><button onClick={() => handleNavClick('services', 'service-dialysis')} className="footer-link-btn">Inpatient & Outpatient Dialysis</button></li>
+                <li><button onClick={() => handleNavClick('services', 'service-home-hemodialysis')} className="footer-link-btn">Home Hemodialysis (NxStage)</button></li>
+                <li><button onClick={() => handleNavClick('services', 'service-peritoneal-dialysis')} className="footer-link-btn">Peritoneal Dialysis (HomeChoice)</button></li>
+                <li><button onClick={() => handleNavClick('services', 'service-transplantation')} className="footer-link-btn">Transplant Follow-Up Care</button></li>
+                <li><button onClick={() => handleNavClick('services', 'service-clinical-research')} className="footer-link-btn">Clinical Research Trials</button></li>
               </ul>
             </div>
 
@@ -192,9 +161,6 @@ export default function Footer({ currentPage, navigateTo }) {
       {/* Disclaimers & Emergency Notice */}
       <div className="footer-disclaimers">
         <div className="container">
-          <div className="emergency-disclaimer-box">
-            <strong>Emergency Medical Disclosure:</strong> In the event of a life-threatening medical emergency, please dial 911 or visit the nearest hospital emergency department immediately. Hospital staff will contact our on-call physician.
-          </div>
 
           <p className="medical-disclaimer-text">
             <strong>Medical Disclaimer:</strong> The clinical information provided on this website is for educational purposes only and does not constitute medical advice or a physician-patient relationship. Always consult a board-certified physician regarding any questions about kidney diseases or treatment options.

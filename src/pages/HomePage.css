@@ -687,6 +687,15 @@
   .hero-button-group .btn {
     width: 100%;
   }
+  .physician-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  .physician-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
   .banner-actions {
     width: 100%;
     flex-direction: column;

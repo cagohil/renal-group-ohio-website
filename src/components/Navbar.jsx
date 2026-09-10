@@ -23,6 +23,17 @@ export default function Navbar({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { id: "home", label: "Home" },
     { id: "about", label: "About Us" },
@@ -193,10 +204,24 @@ export default function Navbar({
       {mobileMenuOpen && (
         <div className="mobile-drawer" role="dialog" aria-modal="true">
           <div className="mobile-drawer-header">
-            <div className="brand-text-block">
+            <a
+              href="#/home"
+              onClick={(e) => { e.preventDefault(); handleLinkClick('home'); }}
+              className="navbar-brand"
+              aria-label="The Renal Group - Home"
+            >
+              {/* <div className="brand-badge-logo"> */}
+              <img
+                src="/assets/new-logo.png"
+                alt="The Renal Group"
+                className="brand-logo-img"
+              />
+              {/* </div> */}
+              {/* <div className="brand-text-block">
               <span className="brand-main-title">The Renal Group</span>
-              <span className="brand-sub-title">Nephrology & Hypertension</span>
-            </div>
+              <span className="brand-sub-title">Nephrology & Hypertension Specialists</span>
+            </div> */}
+            </a>
             <button
               className="mobile-drawer-close"
               onClick={() => setMobileMenuOpen(false)}

@@ -5,25 +5,25 @@ import './MobileStickyBar.css';
 
 export default function MobileStickyBar({ onOpenAppointmentModal }) {
   return (
-    <div className="mobile-sticky-action-bar" aria-label="Quick Actions">
+    <div className="mobile-floating-actions" aria-label="Mobile Quick Actions">
       <a
         href={`tel:${practiceInfo.phone.replace(/\D/g, '')}`}
-        className="sticky-action-btn sticky-call-btn"
+        className="floating-action-fab fab-call"
         id="mobile-sticky-call-btn"
-        aria-label="Call Boardman Office"
+        title={`Call ${practiceInfo.phone}`}
+        aria-label={`Call ${practiceInfo.phone}`}
       >
-        <Phone size={18} />
-        <span>Call Office</span>
+        <Phone size={20} />
       </a>
 
       <button
         onClick={onOpenAppointmentModal}
-        className="sticky-action-btn sticky-appointment-btn"
+        className="floating-action-fab fab-appointment"
         id="mobile-sticky-appointment-btn"
+        title="Request an Appointment"
         aria-label="Request an Appointment"
       >
-        <Calendar size={18} />
-        <span>Request Appointment</span>
+        <Calendar size={20} />
       </button>
     </div>
   );
